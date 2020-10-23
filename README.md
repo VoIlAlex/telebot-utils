@@ -6,7 +6,7 @@ Collection of utils for pyTelegramBotAPI to develop awesome Telegram Bots.
 
 To install the package run the following command in your terminal:
 
-```bash
+```
 pip install telebot-utils
 ```
 
