@@ -53,7 +53,7 @@ setup(
 		'License :: OSI Approved :: MIT License',
 		'Programming Language :: Python :: 3',
 		'Topic :: Communications :: Chat',
-		'Topic :: Software Development'
+		'Topic :: Software Development',
 		'Topic :: Utilities'
 	]
 )
