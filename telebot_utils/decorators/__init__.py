@@ -8,11 +8,11 @@ def auto_answer(bot: telebot.TeleBot, exception_message: Union[None, str]=None):
             try:
                 res = callback_query_handler(call, *args, **kwargs)
                 return res
-            except Exception:
+            except Exception as e:
                 if exception_message is not None:
                     bot.send_message(call.message.chat.id, exception_message)
             finally:
-                bot.answer_callback_query(call.id)
-
+                if isinstance(call, telebot.types.CallbackQuery):
+                    bot.answer_callback_query(call.id)
         return _callback_query_handler
     return _decorator

@@ -18,7 +18,7 @@ setup(
 	packages=find_packages('.'),
 	# Start with a small number and increase it with 
 	# every change you make https://semver.org 
-	version='0.0.3',
+	version='0.0.4',
 	# Chose a license from here: https: // 
 	# help.github.com / articles / licensing - a - 
 	# repository. For example: MIT 
@@ -35,7 +35,7 @@ setup(
 	# Either the link to your github or to your website 
 	url='https://github.com/VoIlAlex/telebot-utils',
 	# Link from which the project can be downloaded 
-	download_url='https://github.com/VoIlAlex/telebot-utils/archive/v0.0.3.tar.gz',
+	download_url='https://github.com/VoIlAlex/telebot-utils/archive/v0.0.4.tar.gz',
 	# List of keywords 
 	keywords=[
 		'telebot',
@@ -45,7 +45,7 @@ setup(
 	],
 	# List of packages to install with this one 
 	install_requires=[
-		"pyTelegramBotAPI==3.7.3"
+		"pyTelegramBotAPI==3.7.2"
 	],
 	# https://pypi.org/classifiers/ 
 	classifiers=[
