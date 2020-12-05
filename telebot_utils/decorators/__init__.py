@@ -1,4 +1,5 @@
 import telebot
+import traceback
 from typing import Union
 from logging import getLogger
 
@@ -22,7 +23,7 @@ def auto_answer(bot: telebot.TeleBot, exception_message: Union[None, str]=None, 
                         logger.error(exception_message)
 
                     if verbose:
-                        print(e)
+                        traceback.print_exc()
             finally:
                 if isinstance(call_or_message, telebot.types.CallbackQuery):
                     bot.answer_callback_query(call_or_message.id)
