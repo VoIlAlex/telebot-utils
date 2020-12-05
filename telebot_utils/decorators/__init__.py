@@ -6,7 +6,7 @@ from logging import getLogger
 logger = getLogger('telebot-utils')
 
 
-def auto_answer(bot: telebot.TeleBot, exception_message: Union[None, str]=None):
+def auto_answer(bot: telebot.TeleBot, exception_message: Union[None, str]=None, verbose=False):
     def _decorator(_handler):
         def _callback_query_handler(call_or_message: [telebot.types.CallbackQuery, telebot.types.Message], *args, **kwargs):
             try:
@@ -20,6 +20,9 @@ def auto_answer(bot: telebot.TeleBot, exception_message: Union[None, str]=None):
                         bot.send_message(call_or_message.chat.id, exception_message)
                     else:
                         logger.error(exception_message)
+
+                    if verbose:
+                        print(e)
             finally:
                 if isinstance(call_or_message, telebot.types.CallbackQuery):
                     bot.answer_callback_query(call_or_message.id)
